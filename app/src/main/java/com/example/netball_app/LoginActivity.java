@@ -1,5 +1,6 @@
 package com.example.netball_app;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -35,7 +36,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnLogin:
-                User user = new User(null, null);
+                String username = Name.getText().toString();
+                String password = Password.getText().toString();
+
+                User user = new User(username, password);
+
+                authenticate(user);
+
                 userLocalStore.storeUserData(user);
                 userLocalStore.setUserLoggedIn(true);
                 startActivity(new Intent(this, HomeActivity.class));
@@ -43,6 +50,31 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 break;
         }
+    }
+    private void authenticate(User user){
+        ServerRequests serverRequests = new ServerRequests(this);
+        serverRequests.fetchUserDataInBackground(user, new GetUserCallback() {
+            @Override
+            public void done(User returnedUser) {
+                if (returnedUser == null){
+                    showErrorMessage();
+                }else{
+                    logUserin(returnedUser);
+                }
+            }
+        });
+    }
+    private void showErrorMessage(){
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(LoginActivity.this);
+        dialogBuilder.setMessage("Details are incorrect");
+        dialogBuilder.setPositiveButton("OK", null);
+        dialogBuilder.show();
+    }
+    private void logUserin(User returnedUser){
+        userLocalStore.storeUserData(returnedUser);
+        userLocalStore.setUserLoggedIn(true);
+
+        startActivity(new Intent(this, HomeActivity.class));
     }
 }
 

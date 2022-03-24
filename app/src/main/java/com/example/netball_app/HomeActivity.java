@@ -41,7 +41,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         if (authenticate() == true){
             displayUserDetails();
 
-        }
+        }else
+            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
 
     }
 

@@ -2,6 +2,7 @@ package com.example.netball_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.EditText;
 import android.util.Patterns;
@@ -79,11 +80,21 @@ public class RegisterActivity extends AppCompatActivity implements android.view.
                 String password = etPassword.getText().toString();
                 int age = Integer.parseInt(etAge.getText().toString());
 
-                User registeredData = new User(name, age, username, email, password);
+                User user = new User(name, age, username, email, password);
 
+                registerUser(user);
                 break;
 
         }
+    }
+    private void registerUser(User user){
+        ServerRequests serverRequests = new ServerRequests(this);
+        serverRequests.storeUserDataInBackground(user, new GetUserCallback() {
+            @Override
+            public void done(User returnedUser) {
+                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+            }
+        });
     }
 
 }
