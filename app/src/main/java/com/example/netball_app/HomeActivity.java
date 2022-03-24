@@ -39,15 +39,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onStart();
 
         if (authenticate() == true){
+            displayUserDetails();
 
         }
 
     }
 
     private boolean authenticate(){
+
         return userLocalStore.getUserLoggedIn();
     }
 
+    private void displayUserDetails (){
+        User user = userLocalStore.getLoggedInUser();
+        etUsername.setText(user.username);
+        etName.setText(user.name);
+        etEmail.setText(user.email);
+    }
 
     @Override
     public void onClick(View view) {
