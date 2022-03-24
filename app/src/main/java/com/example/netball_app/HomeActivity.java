@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button Profile;
     Button idBtnLogout;
-    EditText etName, etUsername, etEmail;
+    EditText etName;
+    EditText etUsername;
     UserLocalStore userLocalStore;
 
     @Override
@@ -19,17 +19,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        etName = (EditText) findViewById(R.id.etName);
-        etUsername = (EditText) findViewById(R.id.etUsername);
-        etEmail = (EditText) findViewById(R.id.etEmail);
-
-        idBtnLogout = (Button) findViewById(R.id.idBtnLogout);
+        etName = findViewById(R.id.etName);
+        etUsername = findViewById(R.id.etUsername);
+        idBtnLogout = findViewById(R.id.idBtnLogout);
         idBtnLogout.setOnClickListener(this);
 
         userLocalStore = new UserLocalStore(this);
 
         //test
-        Profile = (Button) findViewById(R.id.Profilebtn);
+        Button profile = findViewById(R.id.Profilebtn);
         //test
 
     }
@@ -38,7 +36,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         super.onStart();
 
-        if (authenticate() == true){
+        if (authenticate()){
             displayUserDetails();
 
         }else
@@ -55,7 +53,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         User user = userLocalStore.getLoggedInUser();
         etUsername.setText(user.username);
         etName.setText(user.name);
-        etEmail.setText(user.email);
     }
 
     @Override

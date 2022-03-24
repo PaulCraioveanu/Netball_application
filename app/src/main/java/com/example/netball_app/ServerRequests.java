@@ -1,13 +1,9 @@
 package com.example.netball_app;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.Entity;
-import android.net.http.HttpResponseCache;
 import android.os.AsyncTask;
-import android.provider.Settings;
-import android.view.inputmethod.BaseInputConnection;
-
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -28,7 +24,7 @@ import java.util.ArrayList;
 public class ServerRequests {
     ProgressDialog progressDialog;
     public static final int CONNECTION_TIMEOUT = 1000 * 15;
-    public static final String SERVER_ADDRESS = "localhost:3306";
+    public static final String SERVER_ADDRESS = "https://netball-app.000webhostapp.com/";
 
     public ServerRequests(Context context) {
         progressDialog = new ProgressDialog(context);
@@ -37,9 +33,9 @@ public class ServerRequests {
         progressDialog.setMessage("Please wait a couple of seconds");
     }
 
-    public void storeUserDataInBackground(User user, GetUserCallback userCallback) {
+    public void storeUserDataInBackground(User user, GetUserCallback callBack) {
         progressDialog.show();
-        new StoreUserDataAsyncTask(user, userCallback).execute();
+        new StoreUserDataAsyncTask(user, callBack).execute();
     }
 
     public void fetchUserDataInBackground(User user, GetUserCallback callback) {
@@ -47,6 +43,7 @@ public class ServerRequests {
         new fetchUserDataAsyncTask(user, callback).execute();
     }
 
+    @SuppressLint("StaticFieldLeak")
     public class StoreUserDataAsyncTask extends AsyncTask<Void, Void, Void> {
         User user;
         GetUserCallback userCallback;
@@ -64,7 +61,6 @@ public class ServerRequests {
             dataToSend.add(new BasicNameValuePair("age", user.age + ""));
             dataToSend.add(new BasicNameValuePair("username", user.username));
             dataToSend.add(new BasicNameValuePair("password", user.password));
-            dataToSend.add(new BasicNameValuePair("email", user.email));
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -91,6 +87,7 @@ public class ServerRequests {
         }
     }
 
+    @SuppressLint("StaticFieldLeak")
     public class fetchUserDataAsyncTask extends AsyncTask<Void, Void, User> {
         User user;
         GetUserCallback userCallback;
@@ -105,7 +102,6 @@ public class ServerRequests {
             ArrayList<NameValuePair> dataToSend = new ArrayList<>();
             dataToSend.add(new BasicNameValuePair("username", user.username));
             dataToSend.add(new BasicNameValuePair("password", user.password));
-
             HttpParams httpRequestParams = new BasicHttpParams();
             HttpConnectionParams.setConnectionTimeout(httpRequestParams, CONNECTION_TIMEOUT);
             HttpConnectionParams.setSoTimeout(httpRequestParams, CONNECTION_TIMEOUT);
@@ -128,7 +124,7 @@ public class ServerRequests {
                     String name = jObject.getString("name");
                     int age = jObject.getInt("age");
 
-                    returnedUser = new User(name, age, user.username, user.password, user.email);
+                    returnedUser = new User(name, age, user.username, user.password);
                 }
 
             } catch (Exception e) {
