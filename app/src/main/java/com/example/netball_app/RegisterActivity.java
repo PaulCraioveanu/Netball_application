@@ -2,6 +2,7 @@ package com.example.netball_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.widget.Button;
 import android.widget.EditText;
 import android.util.Patterns;
 import android.os.Bundle;
@@ -9,9 +10,11 @@ import android.widget.Toast;
 
 import com.google.android.filament.View;
 
-public class RegisterActivity extends AppCompatActivity {
-    EditText FirstName, LastName, Email, Password, Password2;
+public class RegisterActivity extends AppCompatActivity implements android.view.View.OnClickListener{
+    EditText etName, etUsername, etEmail, etPassword, etAge;
     final int MIN_PASSWORD_LENGTH = 6;
+    Button bRegister;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,51 +29,62 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     void viewInitializations() {
-        FirstName = findViewById(R.id.firstname);
-        LastName = findViewById(R.id.lastname);
-        Email = findViewById(R.id.email);
-        Password = findViewById(R.id.password);
-        Password2 = findViewById(R.id.password2);
+        etName = findViewById(R.id.etName);
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        etAge = findViewById(R.id.etAge);
+        bRegister = (Button) findViewById(R.id.Registerbutton);
+        bRegister.setOnClickListener(this);
 
     }
 
+
     boolean validateInput() {
-        if (FirstName.getText().toString().equals("")) {
-            FirstName.setError("Please enter your First Name");
+        if (etName.getText().toString().equals("")) {
+            etName.setError("Please enter your First Name");
         }
 
-        if (LastName.getText().toString().equals("")) {
-            LastName.setError("Please enter your Last Name");
+        if (etEmail.getText().toString().equals("")) {
+            etEmail.setError("Please enter your Email");
         }
 
-        if (Email.getText().toString().equals("")) {
-            Email.setError("Please enter your Email");
+        if (etPassword.getText().toString().equals("")) {
+            etPassword.setError("Please enter your Password");
         }
 
-        if (Password.getText().toString().equals("")) {
-            Password.setError("Please enter your Password");
+        if (etAge.getText().toString().equals("")) {
+            etAge.setError("Please enter a number");
         }
 
-        if (Password2.getText().toString().equals("")) {
-            Password2.setError("Please enter the same password");
-        }
-
-        if (!isEmailValid(Email.getText().toString())) {
-            Email.setError("Please enter a valid email");
+        if (!isEmailValid(etEmail.getText().toString())) {
+            etEmail.setError("Please enter a valid email");
             return false;
         }
 
-        if (Password.getText().length() < MIN_PASSWORD_LENGTH) {
-            Password.setError("Password should be more than" + MIN_PASSWORD_LENGTH);
+        if (etPassword.getText().length() < MIN_PASSWORD_LENGTH) {
+            etPassword.setError("Password should be more than" + MIN_PASSWORD_LENGTH);
             return false;
-        }
-
-        if (!Password.getText().toString().equals(Password2.getText().toString())) {
-            Password2.setError("Passwords do not match");
-            return false;
-
         }
         return true;
     }
+
+    @Override
+    public void onClick(android.view.View view) {
+        switch (view.getId()) {
+            case R.id.Registerbutton:
+
+                String name = etName.getText().toString();
+                String username = etUsername.getText().toString();
+                String email = etEmail.getText().toString();
+                String password = etPassword.getText().toString();
+                int age = Integer.parseInt(etAge.getText().toString());
+
+                User registeredData = new User(name, age, username, email, password);
+
+                break;
+
+        }
+    }
+
 }
 

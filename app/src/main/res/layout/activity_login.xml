@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
     <!--text view for heading-->
 
@@ -30,21 +30,21 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/idEdtUserName"
+        android:id="@+id/etUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/Header"
         android:layout_marginStart="10dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="10dp"
-        android:hint="Enter UserName"
+        android:hint="Enter Username"
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/idEdtPassword"
+        android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtUserName"
+        android:layout_below="@id/etUsername"
         android:layout_marginStart="10dp"
         android:layout_marginTop="38dp"
         android:layout_marginEnd="10dp"
@@ -52,10 +52,10 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/idBtnLogin"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idEdtPassword"
+        android:layout_below="@id/etPassword"
         android:layout_marginStart="10dp"
         android:layout_marginTop="129dp"
         android:layout_marginEnd="10dp"
