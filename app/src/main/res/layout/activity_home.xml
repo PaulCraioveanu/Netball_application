@@ -91,20 +91,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/idTVHeader"
-        android:layout_width="254dp"
-        android:layout_height="25dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="16dp"
-        android:gravity="center_horizontal"
-        android:text="Welcome!"
-        android:textAlignment="center"
-        android:textColor="@color/purple_700"
-        android:textSize="18sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="157dp" />
-
     <Button
         android:id="@+id/idBtnLogout"
         android:layout_width="match_parent"
@@ -209,5 +195,13 @@
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomemsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="270dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

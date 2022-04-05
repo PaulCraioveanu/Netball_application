@@ -1,16 +1,24 @@
 package com.example.netball_app;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.util.Patterns;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.google.android.filament.View;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 
-public class RegisterActivity extends AppCompatActivity implements android.view.View.OnClickListener{
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class RegisterActivity extends AppCompatActivity{
     EditText etName, etUsername, etEmail, etPassword, etAge;
     final int MIN_PASSWORD_LENGTH = 6;
     Button bRegister;
@@ -29,62 +37,57 @@ public class RegisterActivity extends AppCompatActivity implements android.view.
     }
 
     void viewInitializations() {
+        etUsername = findViewById(R.id.etUsername);
         etName = findViewById(R.id.etName);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
         etAge = findViewById(R.id.etAge);
         bRegister = (Button) findViewById(R.id.Registerbutton);
-        bRegister.setOnClickListener(this);
+
+        bRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String username = etUsername.getText().toString();
+                final String name = etName.getText().toString();
+                final String email = etEmail.getText().toString();
+                final String password = etPassword.getText().toString();
+                final int age = Integer.parseInt(etAge.getText().toString());
+
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+
+                            if (success){
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                RegisterActivity.this.startActivity(intent);
+                            }else{
+                                AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
+                                builder.setMessage("Register Failed")
+                                        .setNegativeButton("Retry", null)
+                                        .create()
+                                        .show();
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                RegisterRequest registerReguest = new RegisterRequest(username, name, email, password, age, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
+                queue.add(registerReguest);
+
+            }
+        });
+
 
     }
 
 
-    boolean validateInput() {
-        if (etName.getText().toString().equals("")) {
-            etName.setError("Please enter your First Name");
-        }
-
-        if (etEmail.getText().toString().equals("")) {
-            etEmail.setError("Please enter your Email");
-        }
-
-        if (etPassword.getText().toString().equals("")) {
-            etPassword.setError("Please enter your Password");
-        }
-
-        if (etAge.getText().toString().equals("")) {
-            etAge.setError("Please enter a number");
-        }
-
-        if (!isEmailValid(etEmail.getText().toString())) {
-            etEmail.setError("Please enter a valid email");
-            return false;
-        }
-
-        if (etPassword.getText().length() < MIN_PASSWORD_LENGTH) {
-            etPassword.setError("Password should be more than" + MIN_PASSWORD_LENGTH);
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public void onClick(android.view.View view) {
-        switch (view.getId()) {
-            case R.id.Registerbutton:
-
-                String name = etName.getText().toString();
-                String username = etUsername.getText().toString();
-                String email = etEmail.getText().toString();
-                String password = etPassword.getText().toString();
-                int age = Integer.parseInt(etAge.getText().toString());
-
-                User registeredData = new User(name, age, username, email, password);
-
-                break;
-
-        }
-    }
 
 }
 

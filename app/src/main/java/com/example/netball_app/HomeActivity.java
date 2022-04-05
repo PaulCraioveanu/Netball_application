@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private Button Profile;
@@ -26,46 +29,29 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         idBtnLogout = (Button) findViewById(R.id.idBtnLogout);
         idBtnLogout.setOnClickListener(this);
 
+        final TextView welcomeMessage = (TextView) findViewById(R.id.welcomemsg);
+
         userLocalStore = new UserLocalStore(this);
 
         //test
         Profile = (Button) findViewById(R.id.Profilebtn);
         //test
 
-    }
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+        String username = intent.getStringExtra("username");
+        String email = intent.getStringExtra("email");
 
-    @Override
-    protected void onStart() {
-        super.onStart();
+        String message = name + "Welcome to your user area";
+        welcomeMessage.setText(message);
+        etName.setText(name);
+        etUsername.setText(username);
+        etEmail.setText(email);
 
-        if (authenticate() == true){
-            displayUserDetails();
-
-        }
-
-    }
-
-    private boolean authenticate(){
-
-        return userLocalStore.getUserLoggedIn();
-    }
-
-    private void displayUserDetails (){
-        User user = userLocalStore.getLoggedInUser();
-        etUsername.setText(user.username);
-        etName.setText(user.name);
-        etEmail.setText(user.email);
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.idBtnLogout:
-                userLocalStore.clearUserData();
-                userLocalStore.setUserLoggedIn(false);
-                startActivity(new Intent(this, FirstActivity.class));
 
-                break;
-        }
     }
 }
