@@ -16,7 +16,6 @@ public class UserLocalStore {
         spEditor.putString("name", user.name);
         spEditor.putString("username", user.username);
         spEditor.putString("password", user.password);
-        spEditor.putString("email", user.email);
         spEditor.putInt("age", user.age);
         spEditor.commit();
 
@@ -26,10 +25,9 @@ public class UserLocalStore {
         String name = userLocalDatabase.getString("name", "");
         String username = userLocalDatabase.getString("username", "");
         String password = userLocalDatabase.getString("password", "");
-        String email = userLocalDatabase.getString("email", "");
         int age = userLocalDatabase.getInt("age", -1);
 
-        User storedUser = new User(name, age, username, email, password);
+        User storedUser = new User(name, age, username, password);
         return storedUser;
 
     }
