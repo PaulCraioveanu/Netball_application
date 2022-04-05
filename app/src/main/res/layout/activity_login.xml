@@ -90,15 +90,9 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="227dp"
-        android:layout_height="173dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="92dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="690dp"
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
         app:srcCompat="@drawable/logo" />
 
 
