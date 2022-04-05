@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -22,8 +23,8 @@ import org.w3c.dom.Text;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     EditText Name;
     EditText Password;
-    Button Info;
-    Button Login;
+    ImageButton Info;
+    ImageButton Login;
     UserLocalStore userLocalStore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         Name = (EditText) findViewById(R.id.etUsername);
         Password = (EditText) findViewById(R.id.etPassword);
-        Info = (Button) findViewById(R.id.btnregister);
-        Login = (Button) findViewById(R.id.btnLogin);
+        Info = (ImageButton) findViewById(R.id.btnregister);
+        Login = (ImageButton) findViewById(R.id.btnLogin);
 
 
         Login.setOnClickListener(this);

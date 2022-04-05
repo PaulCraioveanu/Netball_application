@@ -7,13 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
     private Button Profile;
-    Button idBtnLogout;
+    ImageButton idBtnLogout;
     EditText etName, etUsername, etEmail;
     UserLocalStore userLocalStore;
 
@@ -26,8 +27,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         etUsername = (EditText) findViewById(R.id.etUsername);
         etEmail = (EditText) findViewById(R.id.etEmail);
 
-        idBtnLogout = (Button) findViewById(R.id.idBtnLogout);
-        idBtnLogout.setOnClickListener(this);
+        idBtnLogout = (ImageButton) findViewById(R.id.idBtnLogout);
+        idBtnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
         final TextView welcomeMessage = (TextView) findViewById(R.id.welcomemsg);
 
@@ -42,7 +49,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         String username = intent.getStringExtra("username");
         String email = intent.getStringExtra("email");
 
-        String message = name + "Welcome to your user area";
+        String message = "Hello " + name + ", welcome to your user area!";
         welcomeMessage.setText(message);
         etName.setText(name);
         etUsername.setText(username);
