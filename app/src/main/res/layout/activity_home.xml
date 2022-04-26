@@ -12,15 +12,14 @@
 
     <!--button for making user log out-->
 
-
     <TextView
-        android:layout_width="54dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="162dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
-        android:text="Name"
+        android:text="Welcome home!"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -30,8 +29,22 @@
     <TextView
         android:layout_width="54dp"
         android:layout_height="34dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text="Name:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="54dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="148dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
         android:text="Email"
@@ -44,53 +57,14 @@
     <TextView
         android:layout_width="91dp"
         android:layout_height="32dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="108dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
-        android:text="Username"
+        android:text="Username:"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="219dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="160dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="clip_horizontal"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etUsername"
-        android:layout_width="219dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="88dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="clip_horizontal"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/etName"
-        android:layout_width="220dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="28dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="clip_horizontal"
-        android:textColor="@color/black"
-        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,7 +75,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="540dp"
+        android:layout_marginTop="772dp"
         android:background="@drawable/logout"
         android:text="LogOut"
         android:textAllCaps="false"
@@ -109,86 +83,135 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/Profilebtn"
+    <ImageButton
+        android:id="@+id/ibResources"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="248dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="236dp"
         android:background="#00000000"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
-        android:text="Profile"
+        android:src="@drawable/resources"
+        android:text="Resources"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button11"
+    <ImageButton
+        android:id="@+id/ibSchedule"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
         android:background="#00000000"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
+        android:src="@drawable/schedule"
         android:text="Schedule"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ibDiary" />
 
-    <Button
-        android:id="@+id/button10"
+    <ImageButton
+        android:id="@+id/ibQuicktraining"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
         android:background="#00000000"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
+        android:src="@drawable/training"
         android:text="Quick Training"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ibResources" />
 
-    <Button
-        android:id="@+id/button14"
+    <ImageButton
+        android:id="@+id/ibDiary"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
         android:background="#00000000"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="clip_horizontal"
+        android:src="@drawable/diary"
         android:text="Diary"
         android:textColor="@color/black"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/ibQuicktraining" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="170dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="224dp"
+        android:layout_width="84dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="308dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/etName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="108dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="148dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
