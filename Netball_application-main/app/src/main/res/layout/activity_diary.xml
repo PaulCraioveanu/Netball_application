@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".DiaryActivity"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Workout Diary - Remember the name you saved the text under to load it again !"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="717dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/setAlarm"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:background="?attr/colorOnBackground"
+            android:onClick="onClickSetAlarm"
+            android:shadowColor="#000000"
+            android:text="Set Alarm"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@null" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cropToPadding="false"
+            android:tint="#E1E1E1"
+            android:tintMode="src_in"
+            android:visibility="visible"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="628dp"
+            android:autofillHints=""
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/newButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/colorOnBackground"
+            android:onClick="buttonAction"
+            android:shadowColor="#000000"
+            android:text="new"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/saveButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/colorOnBackground"
+            android:onClick="buttonAction"
+            android:shadowColor="#000000"
+            android:text="@string/save"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/openButton"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/colorOnBackground"
+            android:onClick="buttonAction"
+            android:shadowColor="#000000"
+            android:text="@string/open"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:backgroundTint="@null" />
+
+    </LinearLayout>
+
+</LinearLayout>
