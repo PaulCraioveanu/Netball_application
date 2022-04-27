@@ -12,13 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Netball_app">
         <activity
+            android:name=".AdvancedDrillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IntermediateDrillActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasicDrillActivity"
+            android:exported="false" />
+        <activity
             android:name=".ScheduleActivity"
             android:exported="false" />
         <activity
             android:name=".DiaryActivity"
-            android:exported="false" />
-        <activity
-            android:name=".TrainingActivity"
             android:exported="false" />
         <activity
             android:name=".PositionsActivity"

@@ -6,4 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".DrillActivity">
 
+    <TextView
+        android:id="@+id/tvquicktraining"
+        android:layout_width="382dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="#00000000"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text="QUICK TRAINING"
+        android:textColor="@color/black"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvbasicdrill"
+        android:layout_width="382dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="160dp"
+        android:background="#00000000"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text="Basic Drill"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvintermediatedrill"
+        android:layout_width="382dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:background="#00000000"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text="Intermediate Drill"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvbasicdrill" />
+
+    <TextView
+        android:id="@+id/tvadvanceddrill"
+        android:layout_width="382dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
+        android:background="#00000000"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="clip_horizontal"
+        android:text="Advanced Drill"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvintermediatedrill" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

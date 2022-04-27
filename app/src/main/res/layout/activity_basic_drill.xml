@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BasicDrillActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/basic_skills"
+                android:textStyle="bold"
+                android:textSize="28sp"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shoulder_pass"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/shoulderPassDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shoulder_pass_description"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shoulder_pass_images"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chest_pass"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/chestPassDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/chest_pass_description"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/chest_pass_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bounce_pass"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/bouncePassDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bounce_pass_description"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bounce_pass_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/passing_catching_drills"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/passingCatchingDrillsTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/passing_catching_drills_desc"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/passing_catching_drills"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/long_throw"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/longThrowDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/long_throw_desc"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/long_thow_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cross_ball"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/crossBallDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cross_ball_desc"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/cross_ball_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shuttle_ball"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/shuttleBallDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/shuttle_ball_desc"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/shuttle_ball_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cross_square"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/crossSquareDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cross_square_desc"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/cross_square_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bounce_pass_throw_run"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/bouncePassThrowRunDesTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bounce_pass_throw_desc"
+                android:layout_marginTop="20dp"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/bounce_pass_run"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

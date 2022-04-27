@@ -39,7 +39,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         ibQuicktraining.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, TrainingActivity.class);
+                Intent intent = new Intent(HomeActivity.this, DrillActivity.class);
                 startActivity(intent);
             }
         });
