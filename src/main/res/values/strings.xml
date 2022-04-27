@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="save">Save</string>
+    <string name="open">Open</string>
+    <string name="Texting">chat</string>
+    <string name="channel_name">Netball101</string>
+    <string name="channel_description">Notification for Netball</string>
+</resources>

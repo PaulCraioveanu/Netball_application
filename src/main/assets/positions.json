@@ -1,0 +1,56 @@
+{
+  "positions": [{
+    "title": "Wing Defense (WD)",
+    "image": "https://netballapppooja.000webhostapp.com/images/image2.jpeg",
+    "description": "\u2022 I'm Wing Defence. I can go into the centre and defencive thirds, but NOT in the attacking third or the goal circle.\n\u2022 My main job is to stop the ball reaching the opposition's goal circle.\n\u2022 I must intercept passes and feed them back to the attacking areas.\n\u2022 As well as getting the ball forward I have to mark the opposite Wing Attack.\n\u2022 I must be focused and good at controlling the ball.",
+    "condition": "A wing defender’s physical condition must be fit and healthy. As they are required to mark their opponent for the majority of the game, WD must be prepared to run and jump for the majority of the game.",
+    "skills": "Focused, Jumping, Marking",
+    "videos": "CADgmGH6rMY"
+  },
+    {
+      "title": "Goal Defense (GD)",
+      "image": "https://netballapppooja.000webhostapp.com/images/image1.jpeg",
+      "description": "\u2022 I'm Goal Defence. I patrol the defencive third, the goal circle and the centre third .\n\u2022 My main job is to stop the opposition from scoring and to get the ball out of the danger area.\n\u2022 As a Goal Defence I hav to kepp a close eye on the other team's Goal Attack.\n \u2022 I must have good skills of anticipation so I can block passes and get the ball out to my own attacking players.",
+      "condition": "Goal defense must be physically fit as the position requires plenty of jumping, blocking, and running.",
+      "skills": "Jumping, Catching and snatching the ball, Good anticipation, Footwork",
+      "videos": "aiPKJ2LNmk0"
+    },
+    {
+      "title": "Goal Keeper (GK)",
+      "image": "https://netballapppooja.000webhostapp.com/images/image5.jpeg",
+      "description": "\u2022 I'm Goal Keeper I'm the last line of defence.\n\u2022 I guard the goal circle and the defensive third and must stop the Goal Shooter from scoring.\n\u2022 I have to stay alert so I can collect rebounds off the post and intercept passes.\n\u2022 I'm also responsible for taking throw-ins from the goal-line.\n\u2022 I'm a tall and physical player and I'm prepared to fiercely protect the goal post.",
+      "condition": "Although GK requires less stamina, they must be keen on defense. They are usually once of the taller players also that can jump and use their arms when necessary.",
+      "skills": "Jumping, Catching by keeping eyes on the ball, Marking, Speedy footwork, Using arms and hands to defend",
+      "videos": "G75w62Py9-E"
+    }, {
+      "title": "Center (C)",
+      "image": "https://netballapppooja.000webhostapp.com/images/image3.jpeg",
+      "description": "\u2022 I'm able to move in the whole court, with the exception of the goal circles.\n\u2022 I have to help out the defence and attack.\n\u2022 But I'm mainly relied upon to shift the ball aay from the defencive area into attack.\n\u2022 I also restart the game each time a goal has been scored. I do this by making a pass from the centre circle.\n\u2022 I'm the engine of the team so I have to be quick and creative with my passing.",
+      "condition": "A Center’s physical condition must be fit and healthy. Continuous running and throwing are required in the position, requiring a player’s stamina to be the best within the team. Centers will also be quick to move and change directions without hesitation.",
+      "skills": "Fast-paced, Ball handling, Keeping eyes on the ball, Accurate catching and throwing, Dodging, Side-stepping, Speedy footwork, Rowing",
+      "videos": "WvBEIXa_y4A"
+    }, {
+      "title": "Goal Shooter (GS)",
+      "image": "https://netballapppooja.000webhostapp.com/images/image6.jpeg",
+      "description": "\u2022 I'm Goal Shooter. My main job is simply to score goals.\n\u2022 I'm allowed in the attacking third and the goal circle but nowhere else on the court.\n\u2022 I must have sharp shooting skills.\n\u2022 I have to be able to react quickly, dealing with passes and rebounds.\n\u2022 I must have the steadiest hands on the court and I'm often among the taller players.",
+      "condition": "A goal shooter’s physical condition must be healthy, able to jump for the ball, and use their upper-half of the body according to shooting a goal.",
+      "skills": "Accurate shooting skills, Side-stepping, Speedy footwork, Ball above head, Balance",
+      "videos": "Pjbv8_TskqM"
+    }, {
+      "title": "Goal Attack (GA)",
+      "image": "https://netballapppooja.000webhostapp.com/images/image7.jpeg",
+      "description": "\u2022 I'm Goal Attack. My primary role is scoring and setting up goals.\n\u2022 I can play in the centre third, the attacking third and the goal circle but not the defencive third.\n\u2022 My main duty is to feed the Goal Shooter so they can fire the ball into the net close to the post.\n\u2022 But if the defenders are marking the Goal Shooter I will often have a shot from nearer the edge of the goal circle.\n\u2022 I must have both strong passing and shooting skills.",
+      "condition": "The ideal physical condition of a GA player is fit, healthy, with an ability to shoot.",
+      "skills": "Strong on attack, Shooting, Side-stepping, Jumping, Footwork, Balance",
+      "videos": "JVFM6AqdyoQ"
+    },
+    {
+      "title": "Wing Attack (WA)",
+      "image": "https://netballapppooja.000webhostapp.com/images/image4.jpeg",
+      "description": "\u2022 I'm Wing Attack. I'm the key playmaker of the netball court.\n\u2022 It is my job to create as many goal scoring chances as possible by passing the ball to the shooters.\n\u2022 I can move in the attacking and centre third but not  in the goal circle or the defencive third.\n\u2022 I have to have solid passing and collecting skills. I also need good footwork and the ability to open up space on the court.",
+      "condition": "As plenty of running occurs throughout the position- WA’s physical condition should be fit, healthy, and steady on the attack.",
+      "skills": "Jumping, Side-stepping, Bounce passes, Accurate ball handling, Eye-for-detail, Throwing",
+      "videos": "ly07x02B1XQ"
+    }
+  ]
+}

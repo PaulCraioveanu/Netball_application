@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuideActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="What is netball?"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/heading_style"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:paddingTop="6dp"
+            android:lineHeight="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/content_style"
+            android:textStyle="bold"
+            android:text="A seven a side game in which goals are scored by throwing a ball so that it falls through a netted hoop. By contrast with basketball, a player receiving the ball must still until they have passed it to another team mate."
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Players"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/heading_style"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:paddingTop="6dp"
+            android:lineHeight="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/content_style"
+            android:textStyle="bold"
+            android:text="@string/players"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Game length"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/heading_style"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:paddingTop="6dp"
+            android:id="@+id/conditions"
+            android:lineHeight="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/content_style"
+            android:textStyle="bold"
+            android:text="Netball matches typically last 60 minutes and are broken into four, 15-minute quarters. But different versions of the game mean different match lengths."
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="History of netball"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:background="@drawable/heading_style"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:textSize="14sp"
+            android:paddingTop="6dp"
+            android:lineHeight="20dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/content_style"
+            android:textStyle="bold"
+            android:text="The history of netball can be traced to the early development of basketball. A year after basketball was invented in 1895, the sport was modified for women to accommodate social conventions regarding their participation in sport, giving rise to women's basketball."
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
